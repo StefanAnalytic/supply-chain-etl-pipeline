@@ -5,6 +5,7 @@ Ein Python-Projekt, das fehlerhafte Supply-Chain-Daten aus ERP-Systemen automati
 **Tech Stack:** Python (Pandas), Pytest, SQL
 
 ## 🚀 Was der Code macht
+* `src/ingestion.py`: Lädt riesige Datenmengen stückweise (Chunking), fängt geänderte Spaltennamen ab (Schema Drift) und hat einen Not-Aus-Schalter.
 * `src/pre_screen.py`: Checkt, ob die Rohdaten brauchbar sind (wirft Dateien mit zu vielen leeren Feldern raus).
 * `src/etl_guards.py`: Repariert kaputte Datumsformate und Text-Fehler in Zahlen-Spalten.
 * `tests/`: Pytest-Skript, das automatisch checkt, ob die Reparatur-Logik funktioniert.
