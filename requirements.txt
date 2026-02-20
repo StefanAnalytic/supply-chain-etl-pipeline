@@ -1,0 +1,9 @@
+# Datenverarbeitung
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Testing & Qualitätssicherung
+pytest>=7.0.0
+
+# Daten-Akquise & API
+kaggle>=1.5.0
