@@ -1,22 +1,24 @@
-# 📦 Supply Chain ETL Pipeline
+📦 Supply Chain ETL Pipeline
+Automatisierte Bereinigung, Filterung und SQL-Vorbereitung für fehlerhafte ERP-Daten.
 
-Ein Python-Projekt, das fehlerhafte Supply-Chain-Daten aus ERP-Systemen automatisch bereinigt, filtert und für SQL-Datenbanken vorbereitet.
+Tech Stack: Python Pandas SQL Pytest
 
-**Tech Stack:** Python (Pandas), Pytest, SQL
+✨ Features
+📥 Robust Ingestion (src/ingestion.py): Chunking, Schema-Drift-Handling und Not-Aus-Schalter für riesige Datenmengen.
 
-## 🚀 Was der Code macht
-* `src/ingestion.py`: Lädt riesige Datenmengen stückweise (Chunking), fängt geänderte Spaltennamen ab (Schema Drift) und hat einen Not-Aus-Schalter.
-* `src/pre_screen.py`: Checkt, ob die Rohdaten brauchbar sind (wirft Dateien mit zu vielen leeren Feldern raus).
-* `src/etl_guards.py`: Repariert kaputte Datumsformate und Text-Fehler in Zahlen-Spalten.
-* `tests/`: Pytest-Skript, das automatisch checkt, ob die Reparatur-Logik funktioniert.
+🛡️ Pre-Screening (src/pre_screen.py): Automatische Qualitätskontrolle – wirft Dateien mit zu vielen Nullwerten direkt raus.
 
-## ⚙️ Wie man es ausführt
-```bash
-# 1. Pakete installieren
+🔧 ETL Guards (src/etl_guards.py): Repariert defekte Datumsformate und fehlerhafte Texteingaben in Zahlen-Spalten.
+
+✅ Automated Tests (tests/): Vollständige Pytest-Abdeckung zur Absicherung der Reparatur-Logik.
+
+🚀 Quick Start
+Bash
+# 1. Abhängigkeiten installieren
 pip install -r requirements.txt
 
-# 2. Daten-Check starten
+# 2. Daten-Qualitätscheck starten
 python src/pre_screen.py --path data/raw --min_rows 5000 --max_null_per_col 0.4
 
-# 3. Code testen
+# 3. Tests ausführen
 pytest tests/test_etl_guards.py
