@@ -1,19 +1,19 @@
-📦 Supply Chain ETL Pipeline
-Automatisierte Bereinigung, Filterung und SQL-Vorbereitung für fehlerhafte ERP-Daten.
+# 📦 Supply Chain ETL Pipeline
 
-Tech Stack: Python Pandas SQL Pytest
+> Automatisierte Bereinigung, Filterung und SQL-Vorbereitung für fehlerhafte ERP-Daten.
 
-✨ Features
-📥 Robust Ingestion (src/ingestion.py): Chunking, Schema-Drift-Handling und Not-Aus-Schalter für riesige Datenmengen.
+**Tech Stack:** `Python` | `Pandas` | `SQL` | `Pytest`
 
-🛡️ Pre-Screening (src/pre_screen.py): Automatische Qualitätskontrolle – wirft Dateien mit zu vielen Nullwerten direkt raus.
+## ✨ Features
 
-🔧 ETL Guards (src/etl_guards.py): Repariert defekte Datumsformate und fehlerhafte Texteingaben in Zahlen-Spalten.
+* **📥 Robust Ingestion** (`src/ingestion.py`): Chunking, Schema-Drift-Handling und Not-Aus-Schalter für riesige Datenmengen.
+* **🛡️ Pre-Screening** (`src/pre_screen.py`): Automatische Qualitätskontrolle – wirft Dateien mit zu vielen Nullwerten direkt raus.
+* **🔧 ETL Guards** (`src/etl_guards.py`): Repariert defekte Datumsformate und fehlerhafte Texteingaben in Zahlen-Spalten.
+* **✅ Automated Tests** (`tests/`): Vollständige Pytest-Abdeckung zur Absicherung der Reparatur-Logik.
 
-✅ Automated Tests (tests/): Vollständige Pytest-Abdeckung zur Absicherung der Reparatur-Logik.
+## 🚀 Quick Start
 
-🚀 Quick Start
-Bash
+```bash
 # 1. Abhängigkeiten installieren
 pip install -r requirements.txt
 
